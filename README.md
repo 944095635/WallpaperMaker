@@ -10,13 +10,16 @@ Windows 桌面动态壁纸 视频壁纸
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
 ## 前言 
-DMSkin-for-WPF (简称 DFW) 是一个强大的WPF无边框窗体框架和控件库组合。支持窗体阴影、窗体过渡动画，自带优雅的控件库，旨在帮助开发者更加高效、迅速地创建出优美的WPF界面。它支持的.NET Framework版本从3.5到4.7，并支持从Windows XP到Window 10的所有系统版本。
+DMSkin.Wallpaper (简称 DW) 采用WIN32 接口实现视频嵌入桌面。
 
 DMSkin.Wallpaper 采用功能和UI分离：
 #### 1. 核心区域
 使用独立进程处理桌面动态壁纸。
 #### 2. 展示区域
 WPF制作UI展示
+
+#### 3. 项目分离 A项目 专门处理 句柄嵌入工作
+
 
 下面的表格可以很直观地说明双层方案和单层方案的区别:
 
