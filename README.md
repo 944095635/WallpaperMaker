@@ -1,13 +1,11 @@
 # DMSkin-LiveWallpaper
 Windows 桌面动态壁纸 视频壁纸
 
-# DMSkin-for-WPF
-
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
 ![](https://img.shields.io/badge/version-1.0.0.0-blue.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
 
-#### 一个强大的WPF无边框窗体框架和控件库组合。
+#### 开源的动态桌面壁纸。
 
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
