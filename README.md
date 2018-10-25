@@ -14,12 +14,12 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 #### 项目结构
 
-DMSkin.Wallpaper 主程序
 
-DMSkin.Player 迷你解码器 WPF-MediaElement 
-
-DMSkin.Player.Xunlei 迅雷Aplayer解码器 (开发时需要安装环境,支持更多格式,更小的内存占用)
-
+| 项目名称                | 描述   |特性   |缺点      |
+| :----:              | :---:          | :----:     | :----:     |
+| DMSkin.Wallpaper |主程序   |  -   |  -  |
+| DMSkin.Player  |  迷你解码器       |WPF-MediaElement |  内存占用稍高       |
+| DMSkin.Player.Xunlei |迅雷Aplayer解码器   |  开发时需要安装环境,支持更多格式,更小的内存占用   |  安装包体积偏大(+40MB)  |
 
 #### 执行逻辑
 1.<主程序>程序启动的时候，会根据PlayServer中的PlayerType检测系统进程中是否存在<迷你解码器>或者<迅雷Aplayer解码器>。
