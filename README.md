@@ -19,10 +19,10 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 | :----:              | :---:          | :----:     | :----:     |
 | DMSkin.Wallpaper |主程序   |  -   |  -  |
 | DMSkin.Player  |  迷你解码器       |WPF-MediaElement |  内存占用稍高,长时间运行消耗大       |
-| DMSkin.Player.Xunlei |迅雷Aplayer解码器   |  开发时需要安装环境,支持更多格式,更小的内存占用   |  安装包体积偏大(+40MB)  |
+| DMSkin.Player.Xunlei |迅雷解码器   |  开发时需要安装Aplayer环境,支持更多格式,更小的内存占用   |  安装包体积偏大(+40MB)  |
 
 #### 执行逻辑
-- `主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷Aplayer解码器`。
+- `主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷解码器`。
 
 - 如果存在对应`解码器`进程，程序不会执行任何操作(如果不存在，`主程序`会启动解码器)。
 
@@ -30,9 +30,9 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 #### 注意
 
-1.基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
+- 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
-2.本项目会开源并且正式发布至[LiveWallpaper.dmskin.com](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip)。
+- 本项目会开源并且正式发布至[LiveWallpaper.dmskin.com](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip)。
 
 
 #### 使用&修改
