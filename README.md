@@ -8,9 +8,8 @@ Windows 桌面动态壁纸 视频壁纸
 #### 开源的动态桌面壁纸。
 
 <a href="http://on9mnekns.bkt.clouddn.com/desktopdemo.mp4" target="_blank">
-   <img src="http://on9mnekns.bkt.clouddn.com/demo.gif">
+   <img src="https://raw.githubusercontent.com/944095635/DMSkin-LiveWallpaper/master/Screenshot/demo.gif">
 </a>
-<img src="http://on9mnekns.bkt.clouddn.com/demo.gif">
 
 
 ## 前言 
