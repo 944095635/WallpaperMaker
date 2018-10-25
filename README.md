@@ -49,6 +49,7 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 #### 自定义解码器
 虽然目前只内置了2种解码器(MediaElement+Aplayer)
+
 但是你可以通过编写代码实现自己的解码器(例如用VLC解码器)
 ````csharp
 /// <summary>
