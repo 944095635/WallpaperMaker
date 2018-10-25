@@ -7,6 +7,7 @@ namespace DMSkin.Server
     /// </summary>
     public  class PlayServer
     {
+        #region 全部解码器操作
         /// <summary>
         /// 初始化解码器
         /// </summary>
@@ -14,29 +15,16 @@ namespace DMSkin.Server
         {
             switch (PlayerType)
             {
-                case PlayerType.W:
-                    //结束掉进程中的 DMSkin.Player.Xunlei
-
-                    //判断进程中是否存在 DMSkin.Player 
-                    Process[] process = Process.GetProcessesByName("DMSkin.Player");
-                    //没有DMSkin.Player 再创建 DMSkin.Player 
-                    if (process.Length == 0)
-                    {
-                        Process.Start("DMSkin.Player.exe");
-                    }
+                case PlayerType.MN:
+                    CloseXL();
+                    StartMN();
                     break;
                 case PlayerType.XL:
-                    //结束掉进程中的 DMSkin.Player 
-
-                    //判断进程中是否存在 DMSkin.Player.Xunlei
-
-                    //没有DMSkin.Player.Xunlei 再创建 DMSkin.Player.Xunlei
-                    break;
-                default:
+                    CloseMN();
+                    StartXL();
                     break;
             }
         }
-
 
         /// <summary>
         /// 播放文件
@@ -53,18 +41,90 @@ namespace DMSkin.Server
             }
         }
 
-        public static PlayerType PlayerType { get; set; }
+        /// <summary>
+        /// 关掉全部解码器
+        /// </summary>
+        /// <param name="Url"></param>
+        public static void Close()
+        {
+            CloseXL();
+            CloseMN();
+        } 
+        #endregion
+
+        #region 迅雷解码器
+        /// <summary>
+        /// 启动迅雷解码器
+        /// </summary>
+        private static void StartXL()
+        {
+            //判断进程中是否存在 DMSkin.Player 
+            Process[] process = Process.GetProcessesByName("DMSkin.Player.Xunlei");
+            //没有DMSkin.Player 再创建 DMSkin.Player 
+            if (process.Length == 0)
+            {
+                Process.Start("DMSkin.Player.Xunlei.exe");
+            }
+        }
+
+        /// <summary>
+        /// 关闭迅雷的解码器
+        /// </summary>
+        private static void CloseXL()
+        {
+            Process[] process = Process.GetProcessesByName("DMSkin.Player.Xunlei");
+            foreach (var item in process)
+            {
+                item.Kill();
+            }
+        } 
+        #endregion
+
+        #region 迷你解码器
+        /// <summary>
+        /// 启动迷你解码器
+        /// </summary>
+        private static void StartMN()
+        {
+            //判断进程中是否存在 DMSkin.Player 
+            Process[] process = Process.GetProcessesByName("DMSkin.Player");
+            //没有DMSkin.Player 再创建 DMSkin.Player 
+            if (process.Length == 0)
+            {
+                Process.Start("DMSkin.Player.exe");
+            }
+        }
+
+        /// <summary>
+        /// 关闭迷你的解码器
+        /// </summary>
+        private static void CloseMN()
+        {
+            Process[] process = Process.GetProcessesByName("DMSkin.Player");
+            foreach (var item in process)
+            {
+                item.Kill();
+            }
+        }
+        #endregion
+
+        #region 当前开启的解码器类型
+        /// <summary>
+        /// 解码器类型
+        /// </summary>
+        public static PlayerType PlayerType { get; set; } 
+        #endregion
     }
 
     /// <summary>
-    /// 解码器类型
+    /// 解码器类型 - 未来可以自定义更多解码器
     /// </summary>
     public enum PlayerType
     {
         /// <summary>
-        /// 默认
+        /// 迷你解码
         /// </summary>
-        W,
+        MN,
         /// <summary>
         /// 迅雷解码
         /// </summary>

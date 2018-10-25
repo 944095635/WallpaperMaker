@@ -17,8 +17,6 @@ namespace DMSkin.Wallpaper
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
-            PlayServer.Initialize();
         }
     }
 }

@@ -15,15 +15,16 @@ namespace DMSkin.Player
 
             //手动关闭模式
             ShutdownMode = ShutdownMode.OnExplicitShutdown;
-            NamedPipeListenServer svr = new NamedPipeListenServer("Play.Server")
+
+            NamedPipeListenServer server = new NamedPipeListenServer("Play.Server")
             {
                 ProcessMessage = ProcessMessage
             };
-            svr.Run();
+            server.Run();
         }
 
         /// <summary>
-        /// 处理消息
+        /// 处理客户端请求
         /// </summary>
         public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
         {
@@ -59,6 +60,7 @@ namespace DMSkin.Player
                     p.DeskTop();
                 }
                 p.Play(msg.Url);
+                System.Console.WriteLine();
             });
         }
     }
