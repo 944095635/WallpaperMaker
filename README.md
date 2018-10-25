@@ -24,21 +24,21 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 | DMSkin.Player  |  迷你解码器       |WPF-MediaElement |  内存占用稍高,长时间运行消耗大       |
 | DMSkin.Player.Xunlei |迅雷解码器   |  开发时需要安装Aplayer环境,更多格式,更小内存   |  安装包体积偏大(+40MB)  |
 
-#### 执行逻辑
+#### 【执行逻辑】
 - `主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷解码器`。
 
 - 如果存在对应`解码器`进程，程序不会执行任何操作(如果不存在，`主程序`会启动解码器)。
 
 - `主程序`与`解码器`分离，减少内存消耗。主程序退出之后`解码器`依然会运行(主程序中可以`关闭解码器进程`)。
 
-#### 注意
+#### 【注意】
 
 - 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
 - 本项目会开源并且正式发布至[LiveWallpaper.dmskin.com](http://LiveWallpaper.dmskin.com)。
 
 
-#### 使用&修改
+#### 【使用&修改】
 
 #### 1. [下载使用](#)
 
@@ -47,7 +47,27 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 #### 2. [下载源码](#) 然后自己编译
 点击 `DMSkin.Wallpaper.sln` 打开项目。
 
-#### 自定义解码器
+#### 【迅雷解码器 开发环境】 [迅雷Aplayer官网](http://aplayer.open.xunlei.com/)
+编译DMSkin.Player.Xunlei需要安装SDK
+
+###### 安装SDK用于开发 [下载开发SDK](http://aplayer.open.xunlei.com/APlayerSDK.zip)
+````csharp
+将SDK下载解压到D盘根目录 D:\APlayerSDK
+以管理员启动命令提示行 CMD.EXE
+输入命令:
+    D: 执行
+    CD D:\APlayerSDK 执行
+    install.bat 执行
+结果:
+    复制了8个文件 OK
+````
+
+###### 下载完整解码库用于播放 [下载解码库CodeCS](http://aplayer.open.xunlei.com/codecs.zip)
+````csharp
+将codecs下载解压到软件根目录(保留codecs文件夹)
+````
+
+#### 【自定义解码器】
 虽然目前只内置了2种解码器(MediaElement+Aplayer)
 
 但是你可以通过编写代码实现自己的解码器(例如用VLC解码器)
@@ -76,7 +96,7 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 }
 ````
 
-## 联系
+## 【联系】
 欢迎加入我们：
 
 - **[C# .NET (2000人) QQ交流群](http://qm.qq.com/cgi-bin/qm/qr?k=reTIeglEELMIW267mOO7amouFFwhJwwP)**
@@ -92,7 +112,7 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 
 <img src="http://p40kjburh.bkt.clouddn.com/18-6-13/9034578.jpg" width="500">
 
-## 更新日志
+## 【更新日志】
 
 ### 1.0.0.0 (2018-10-25)
 
