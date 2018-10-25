@@ -68,7 +68,8 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 {
     switch (msg.ServerMsgType)
     {
-         case ServerMsgType.XXX:
+         case ServerMsgType.OpenUrl:
+            ///让你的播放器执行播放视频操作
             break;
     }
     pipeServer.Close();
