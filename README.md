@@ -32,7 +32,7 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 1.基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
-2.本项目会开源并且正式发布。
+2.本项目会开源并且正式发布至[LiveWallpaper.dmskin.com](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip)。
 
 
 #### 下载&安装&修改
