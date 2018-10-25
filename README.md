@@ -7,7 +7,9 @@ Windows 桌面动态壁纸 视频壁纸
 
 #### 开源的动态桌面壁纸。
 
-<img src="https://raw.githubusercontent.com/94x4095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
+<video src="http://on9mnekns.bkt.clouddn.com/desktopdemo.mp4" controls="controls" align="center">
+您的浏览器不支持 video 标签。
+</video>
 
 ## 前言 
 DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
