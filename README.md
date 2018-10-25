@@ -10,6 +10,7 @@ Windows 桌面动态壁纸 视频壁纸
 <a href="http://on9mnekns.bkt.clouddn.com/desktopdemo.mp4" target="_blank">
    <img src="http://on9mnekns.bkt.clouddn.com/demo.gif">
 </a>
+<img src="http://on9mnekns.bkt.clouddn.com/demo.gif">
 
 
 ## 前言 
