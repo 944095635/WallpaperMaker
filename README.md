@@ -10,11 +10,11 @@ Windows 桌面动态壁纸 视频壁纸
 <img src="https://raw.githubusercontent.com/94x4095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
 ## 前言 
-DMSkin.Wallpaper (简称 DW) 采用WIN32 接口实现视频嵌入桌面。
+DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
-#### DMSkin.Wallpaper 主程序
-#### DMSkin.Player 迷你解码器
-#### DMSkin.Player.Xunlei 迅雷Aplayer解码器
+DMSkin.Wallpaper 主程序
+DMSkin.Player 迷你解码器
+DMSkin.Player.Xunlei 迅雷Aplayer解码器
 
 ## 执行逻辑
 #### 1.<主程序>程序启动的时候，会根据PlayServer中的PlayerType检测系统进程中是否存在<迷你解码器>或者<迅雷Aplayer解码器>。
