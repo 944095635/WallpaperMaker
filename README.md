@@ -48,7 +48,7 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 点击 `DMSkin.Wallpaper.sln` 打开项目。
 
 #### 迅雷解码器 开发环境
-如果你需要修改DMSkin.Player.Xunlei的代码请安装开发SDK
+编译DMSkin.Player.Xunlei需要安装SDK
 ````csharp
 [迅雷Aplayer官网](http://aplayer.open.xunlei.com/)
 
