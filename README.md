@@ -8,7 +8,7 @@ Windows 桌面动态壁纸 视频壁纸
 #### 开源的动态桌面壁纸。
 
 <a href="http://on9mnekns.bkt.clouddn.com/desktopdemo.mp4" target="_blank">
-<img src="http://on9mnekns.bkt.clouddn.com/demo.gif" align="center">
+   <img src="http://on9mnekns.bkt.clouddn.com/demo.gif">
 </a>
 
 
@@ -35,17 +35,46 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 - 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
-- 本项目会开源并且正式发布至[LiveWallpaper.dmskin.com](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip)。
+- 本项目会开源并且正式发布至[LiveWallpaper.dmskin.com](http://LiveWallpaper.dmskin.com)。
 
 
 #### 使用&修改
 
-#### 1. [下载使用](https://github.com/944095635/DMSkin-for-WPF/releases/download/2.5.0.1/Release.zip)
+#### 1. [下载使用](#)
 
 你可以直接下载压缩包解压运行。
 
-#### 2. [下载源码](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip) 然后自己编译
+#### 2. [下载源码](#) 然后自己编译
 点击 `DMSkin.Wallpaper.sln` 打开项目。
+
+#### 自定义解码器
+虽然目前只内置了2种解码器(MediaElement+Aplayer)
+
+但是你可以通过编写代码实现自己的解码器(例如用VLC解码器)
+````csharp
+/// <summary>
+/// 放到解码器初始化的地方-解码器必须一直处于运行状态 Winform/WPF/Console 都支持
+/// </summary>
+NamedPipeListenServer server = new NamedPipeListenServer("Play.Server")
+{
+    ProcessMessage = ProcessMessage
+};
+server.Run();
+
+/// <summary>
+/// 处理请求-例如处理客户端 Open URL的请求
+/// </summary>
+public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
+{
+    switch (msg.ServerMsgType)
+    {
+         case ServerMsgType.OpenUrl:
+            ///让你的播放器执行播放视频操作
+            break;
+    }
+    pipeServer.Close();
+}
+````
 
 ## 联系
 欢迎加入我们：
