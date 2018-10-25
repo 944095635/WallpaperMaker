@@ -7,10 +7,15 @@ Windows 桌面动态壁纸 视频壁纸
 
 #### 开源的动态桌面壁纸。
 
-<img src="https://raw.githubusercontent.com/944095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
+<img src="https://raw.githubusercontent.com/94x4095635/DMSkin-for-WPF/master/DMSkin.ScreenShot/demo.png" align="center">
 
 ## 前言 
 DMSkin.Wallpaper (简称 DW) 采用WIN32 接口实现视频嵌入桌面。
+
+## 执行逻辑
+#### 1.DMSkin.Wallpaper 程序启动的时候 会根据PlayServer中的PlayerType检测系统进程中是否存在DMSkin.Player或者DMSkin.Player.Xunlei。
+#### 2.如果存在对应解码器，程序不会执行任何操作（如果不存在，主程序会启动对于解码器）
+#### 3.主程序与解码器分离 减少 内存消耗。主程序退出之后 解码器依然会运行。
 
 DMSkin.Wallpaper 采用功能和UI分离：
 #### 1. 核心区域
