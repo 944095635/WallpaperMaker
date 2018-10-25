@@ -12,10 +12,14 @@ Windows 桌面动态壁纸 视频壁纸
 ## 前言 
 DMSkin.Wallpaper (简称 DW) 采用WIN32 接口实现视频嵌入桌面。
 
+#### DMSkin.Wallpaper 主程序
+#### DMSkin.Player 迷你解码器
+#### DMSkin.Player.Xunlei 迅雷Aplayer解码器
+
 ## 执行逻辑
-#### 1.DMSkin.Wallpaper 程序启动的时候 会根据PlayServer中的PlayerType检测系统进程中是否存在DMSkin.Player或者DMSkin.Player.Xunlei。
-#### 2.如果存在对应解码器，程序不会执行任何操作（如果不存在，主程序会启动对于解码器）
-#### 3.主程序与解码器分离 减少 内存消耗。主程序退出之后 解码器依然会运行。
+#### 1.<主程序>程序启动的时候，会根据PlayServer中的PlayerType检测系统进程中是否存在<迷你解码器>或者<迅雷Aplayer解码器>。
+#### 2.如果存在对应解码器进程，程序不会执行任何操作(如果不存在，主程序会启动解码器)。
+#### 3.主程序与解码器分离，减少内存消耗。主程序退出之后解码器依然会运行(主程序中可以关闭解码器进程)。
 
 DMSkin.Wallpaper 采用功能和UI分离：
 #### 1. 核心区域
