@@ -36,7 +36,7 @@ namespace DMSkin.Server
                 client.Query(new ServerMsg
                 {
                     ServerMsgType = ServerMsgType.OpenUrl,
-                    Url = Url
+                    Value = Url
                 });
             }
         }
@@ -45,12 +45,24 @@ namespace DMSkin.Server
         /// 关掉全部解码器
         /// </summary>
         /// <param name="Url"></param>
-        public static void Close()
+        public static void CloseAll()
         {
             CloseXL();
             CloseMN();
-        } 
+        }
         #endregion
+
+        public static void SetVolume(int Volume)
+        {
+            using (NamedPipeClient client = new NamedPipeClient(".", "Play.Server"))
+            {
+                client.Query(new ServerMsg
+                {
+                    ServerMsgType = ServerMsgType.Volume,
+                    IntValue = Volume
+                });
+            }
+        }
 
         #region 迅雷解码器
         /// <summary>

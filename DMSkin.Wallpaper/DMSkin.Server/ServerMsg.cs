@@ -24,7 +24,8 @@ namespace DMSkin.Server
             }
         }
 
-        public string Url { get; set; }
+        public string Value { get; set; }
+        public int IntValue { get; set; }
     }
 
     public enum ServerMsgType
@@ -37,5 +38,9 @@ namespace DMSkin.Server
         /// 放入桌面
         /// </summary>
         InDeskTop,
+        /// <summary>
+        /// 音量
+        /// </summary>
+        Volume
     }
 }

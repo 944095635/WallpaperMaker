@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Interop;
 
@@ -27,7 +28,7 @@ namespace DMSkin.Player
         /// <summary>
         /// 放入桌面
         /// </summary>
-        public void DeskTop()
+        public void InDeskTop()
         {
             if (!iSDeskTop)
             {
@@ -50,6 +51,11 @@ namespace DMSkin.Player
                 media.Stop();
                 media.Play();
             }
+        }
+
+        internal void SetVolume(int intValue)
+        {
+            media.Volume = Convert.ToDouble(intValue / 100.0);
         }
     }
 }

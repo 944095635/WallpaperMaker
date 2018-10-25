@@ -24,6 +24,11 @@ namespace DMSkin.Player
         }
 
         /// <summary>
+        /// 播放器对象
+        /// </summary>
+        Player p;
+
+        /// <summary>
         /// 处理客户端请求
         /// </summary>
         public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
@@ -32,36 +37,26 @@ namespace DMSkin.Player
             switch (msg.ServerMsgType)
             {
                 case ServerMsgType.OpenUrl:
-                    OpenUrl(msg);
+                    Execute.OnUIThread(() => {
+                        if (p == null)//初始化
+                        {
+                            p = new Player();
+                            p.Show();
+                            p.InDeskTop();
+                        }
+                        p.Play(msg.Value.ToString());
+                        System.Console.WriteLine();
+                    });
                     break;
                 case ServerMsgType.InDeskTop:
                     break;
-                default:
+                case ServerMsgType.Volume:
+                    Execute.OnUIThread(() => {
+                        p.SetVolume(msg.IntValue);
+                    });
                     break;
             }
             pipeServer.Close();
-        }
-
-        /// <summary>
-        /// 播放器对象
-        /// </summary>
-        Player p;
-        /// <summary>
-        /// 播放一个链接
-        /// </summary>
-        /// <param name="msg"></param>
-        public void OpenUrl(ServerMsg msg)
-        {
-            Execute.OnUIThread(()=> {
-                if (p == null)//初始化
-                {
-                    p = new Player();
-                    p.Show();
-                    p.DeskTop();
-                }
-                p.Play(msg.Url);
-                System.Console.WriteLine();
-            });
         }
     }
 }

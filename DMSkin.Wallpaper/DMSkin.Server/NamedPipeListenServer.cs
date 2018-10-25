@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Pipes;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace DMSkin.Server
 {
@@ -43,67 +44,69 @@ namespace DMSkin.Server
 
         public void Run()
         {
-            using (NamedPipeServerStream pipeServer = CreateNamedPipeServerStream())
+            Task.Run(()=> 
             {
-                pipeServer.WaitForConnection();
-                Console.WriteLine("建立一个连接 " + pipeServer.GetHashCode());
-
-                Action act = new Action(Run);
-                act.BeginInvoke(null, null);
-
-                try
+                using (NamedPipeServerStream pipeServer = CreateNamedPipeServerStream())
                 {
-                    bool isRun = true;
-                    while (isRun)
+                    pipeServer.WaitForConnection();
+                    Console.WriteLine("建立一个连接 " + pipeServer.GetHashCode());
+
+                    Action act = new Action(Run);
+                    act.BeginInvoke(null, null);
+
+                    try
                     {
-                        string str = null;
-                        string strAll = null;
-                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
-
-                        StreamReader sr = new StreamReader(pipeServer);
-                        while (pipeServer.CanRead && (null != (str = sr.ReadLine())))
+                        bool isRun = true;
+                        while (isRun)
                         {
+                            string str = null;
+                            string strAll = null;
+                            System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
-                            //当遇到连续2个换行外加#END，表示输入结束
-                            if (str == "#END")
+                            StreamReader sr = new StreamReader(pipeServer);
+                            while (pipeServer.CanRead && (null != (str = sr.ReadLine())))
                             {
-                                strAll = sb.ToString();
-                                if (strAll.EndsWith("\r\n\r\n"))
-                                    break;
-                            }
-                            else
-                            {
-                                if (str == "")
-                                    sb.AppendLine();
+
+                                //当遇到连续2个换行外加#END，表示输入结束
+                                if (str == "#END")
+                                {
+                                    strAll = sb.ToString();
+                                    if (strAll.EndsWith("\r\n\r\n"))
+                                        break;
+                                }
                                 else
-                                    sb.AppendLine(str);
+                                {
+                                    if (str == "")
+                                        sb.AppendLine();
+                                    else
+                                        sb.AppendLine(str);
+                                }
                             }
+
+                            strAll = strAll.Substring(0, strAll.Length - "\r\n\r\n\r\n".Length);
+                            ProcessMessage(Newtonsoft.Json.JsonConvert.DeserializeObject<ServerMsg>(strAll), pipeServer);
+
+                            if (!pipeServer.IsConnected)
+                            {
+                                isRun = false;
+                                break;
+                            }
+
+                            Thread.Sleep(50);
                         }
-
-                        strAll = strAll.Substring(0, strAll.Length - "\r\n\r\n\r\n".Length);
-                        ProcessMessage(Newtonsoft.Json.JsonConvert.DeserializeObject<ServerMsg>(strAll), pipeServer);
-
-                        if (!pipeServer.IsConnected)
-                        {
-                            isRun = false;
-                            break;
-                        }
-
-                        Thread.Sleep(50);
+                    }
+                    // Catch the IOException that is raised if the pipe is broken
+                    // or disconnected.
+                    catch (IOException e)
+                    {
+                        Console.WriteLine("ERROR: {0}", e.Message);
+                    }
+                    finally
+                    {
+                        DistroyObject(pipeServer);
                     }
                 }
-                // Catch the IOException that is raised if the pipe is broken
-                // or disconnected.
-                catch (IOException e)
-                {
-                    Console.WriteLine("ERROR: {0}", e.Message);
-                }
-                finally
-                {
-                    DistroyObject(pipeServer);
-                }
-            }
-
+            });
         }
 
         public Action<ServerMsg, NamedPipeServerStream> ProcessMessage;
