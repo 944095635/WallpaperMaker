@@ -47,6 +47,33 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 #### 2. [下载源码](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip) 然后自己编译
 点击 `DMSkin.Wallpaper.sln` 打开项目。
 
+#### 自定义解码器
+虽然目前只内置了2种解码器(MediaElement+Aplayer)
+但是你可以通过编写代码实现自己的解码器(例如用VLC解码器)
+````csharp
+/// <summary>
+/// 放到解码器初始化的地方-解码器必须一直处于运行状态 Winform/WPF/Console 都支持
+/// </summary>
+NamedPipeListenServer server = new NamedPipeListenServer("Play.Server")
+{
+    ProcessMessage = ProcessMessage
+};
+server.Run();
+
+/// <summary>
+/// 处理请求-例如处理客户端 Open URL的请求
+/// </summary>
+public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
+{
+    switch (msg.ServerMsgType)
+    {
+         case ServerMsgType.XXX:
+            break;
+    }
+    pipeServer.Close();
+}
+````
+
 ## 联系
 欢迎加入我们：
 
