@@ -11,6 +11,7 @@ Windows 桌面动态壁纸 视频壁纸
    <img src="https://raw.githubusercontent.com/944095635/DMSkin-LiveWallpaper/master/Screenshot/demo.gif">
 </a>
 
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-LiveWallpaper/master/Screenshot/Debug.png">
 
 ## 前言 
 DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
