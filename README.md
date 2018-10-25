@@ -18,15 +18,15 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 | 项目名称                | 描述   |特性   |缺点      |
 | :----:              | :---:          | :----:     | :----:     |
 | DMSkin.Wallpaper |主程序   |  -   |  -  |
-| DMSkin.Player  |  迷你解码器       |WPF-MediaElement |  内存占用稍高       |
+| DMSkin.Player  |  迷你解码器       |WPF-MediaElement |  内存占用稍高,长时间运行消耗大       |
 | DMSkin.Player.Xunlei |迅雷Aplayer解码器   |  开发时需要安装环境,支持更多格式,更小的内存占用   |  安装包体积偏大(+40MB)  |
 
 #### 执行逻辑
-1.`主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷Aplayer解码器`。
+- 1.`主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷Aplayer解码器`。
 
-2.如果存在对应`解码器`进程，程序不会执行任何操作(如果不存在，`主程序`会启动解码器)。
+- 2.如果存在对应`解码器`进程，程序不会执行任何操作(如果不存在，`主程序`会启动解码器)。
 
-3.`主程序`与`解码器`分离，减少内存消耗。主程序退出之后`解码器`依然会运行(主程序中可以`关闭解码器进程`)。
+- 3.`主程序`与`解码器`分离，减少内存消耗。主程序退出之后`解码器`依然会运行(主程序中可以`关闭解码器进程`)。
 
 #### 注意
 
@@ -44,11 +44,6 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 #### 2. [下载源码](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip) 然后自己编译
 点击 `DMSkin.Wallpaper.sln` 打开项目。
-
-还有一些其它的方法可以获取到 `DMSkin.WPF.dll`和源码：
-
-- Nuget  `PM> Install-Package DMSkin.WPF -Version 2.5.0.4`
-- Git  `git clone git@github.com:944095635/DMSkin-for-WPF.git`
 
 ## 用法 & 配置
 #### 1. 创建一个WPF项目
