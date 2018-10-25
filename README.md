@@ -50,7 +50,7 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 #### 【迅雷解码器 开发环境】 [迅雷Aplayer官网](http://aplayer.open.xunlei.com/)
 编译DMSkin.Player.Xunlei需要安装SDK
 
-#### 安装SDK用于开发
+###### 安装SDK用于开发
 [下载开发SDK](http://aplayer.open.xunlei.com/APlayerSDK.zip)
 ````csharp
 将SDK下载解压到D盘根目录 D:\APlayerSDK
@@ -63,7 +63,7 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
     复制了8个文件 OK
 ````
 
-#### 下载完整解码库用于播放
+###### 下载完整解码库用于播放
 [下载解码库CodeCS](http://aplayer.open.xunlei.com/codecs.zip)
 ````csharp
 将codecs下载解压到软件根目录(保留codecs文件夹)
