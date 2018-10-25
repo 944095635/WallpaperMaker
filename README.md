@@ -43,7 +43,7 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 你可以直接下载压缩包解压运行。
 
 #### 2. [下载源码](https://github.com/944095635/DMSkin-for-WPF/archive/master.zip) 然后自己编译
-点击 `DMSkin-for-WPF.sln` 打开项目， 右击解决方案资源管理器上的DMSkin.WPF 然后点击**生成**按钮即可编译获得**dll**文件. 接着打开资源管理器，你会发现 `bin\Debug`目录下已经多了一个DMSkin.WPF.dll.
+点击 `DMSkin.Wallpaper.sln` 打开项目。
 
 还有一些其它的方法可以获取到 `DMSkin.WPF.dll`和源码：
 
