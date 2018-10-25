@@ -18,7 +18,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="Button_Click"
-            Content="铺满桌面" />
+            Content="播放视频" />
         <TextBox
             x:Name="tb"
             Width="120"
@@ -26,14 +26,7 @@
             Margin="154,178,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text=""
+            Text="D:\视频壁纸-上海.mp4"
             TextWrapping="Wrap" />
-        <Button
-            Width="75"
-            Margin="154,240,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Click="Button_Click1"
-            Content="放入桌面" />
     </Grid>
 </Window>

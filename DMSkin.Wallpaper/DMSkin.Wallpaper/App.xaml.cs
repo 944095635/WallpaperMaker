@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DMSkin.Server;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,11 @@ namespace DMSkin.Wallpaper
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            PlayServer.Initialize();
+        }
     }
 }

@@ -3,6 +3,9 @@ D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.Wallpaper.exe
 D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.Wallpaper.pdb
 D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.WPF.dll
 D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.WPF.pdb
+D:\DMWallpaper\Build\DMSkin.Wallpaper.exe.config
+D:\DMWallpaper\Build\DMSkin.Wallpaper.exe
+D:\DMWallpaper\Build\DMSkin.Wallpaper.pdb
 D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\obj\Debug\DMSkin.Wallpaper.csprojAssemblyReference.cache
 D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\obj\Debug\MainWindow.g.cs
 D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\obj\Debug\App.g.cs

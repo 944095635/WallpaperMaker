@@ -1,0 +1,9 @@
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\bin\Debug\DMSkin.Player.Xunlei.exe.config
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\bin\Debug\DMSkin.Player.Xunlei.exe
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\bin\Debug\DMSkin.Player.Xunlei.pdb
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\obj\Debug\DMSkin.Player.Xunlei.Properties.Resources.resources
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\obj\Debug\DMSkin.Player.Xunlei.csproj.GenerateResource.cache
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\obj\Debug\DMSkin.Player.Xunlei.csproj.CoreCompileInputs.cache
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\obj\Debug\DMSkin.Player.Xunlei.exe
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\obj\Debug\DMSkin.Player.Xunlei.pdb
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\obj\Debug\DMSkin.Player.Xunlei.csprojAssemblyReference.cache

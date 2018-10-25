@@ -1,9 +1,7 @@
-﻿<Application x:Class="DMSkin.Player.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:DMSkin.Player"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+﻿<Application
+    x:Class="DMSkin.Player.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DMSkin.Player">
+    <Application.Resources />
 </Application>

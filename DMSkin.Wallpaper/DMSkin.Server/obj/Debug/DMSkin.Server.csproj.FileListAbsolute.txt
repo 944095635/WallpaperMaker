@@ -1,0 +1,9 @@
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\bin\Debug\DMSkin.Server.dll
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\bin\Debug\DMSkin.Server.pdb
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\obj\Debug\DMSkin.Server.csprojAssemblyReference.cache
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\obj\Debug\DMSkin.Server.csproj.CoreCompileInputs.cache
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\obj\Debug\DMSkin.Server.dll
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\obj\Debug\DMSkin.Server.pdb
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\bin\Debug\Newtonsoft.Json.dll
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\bin\Debug\Newtonsoft.Json.xml
+D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Server\obj\Debug\DMSkin.Server.csproj.CopyComplete

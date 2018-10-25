@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\Build\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Player.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,8 +63,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Player.xaml.cs">
+      <DependentUpon>Player.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -98,6 +98,10 @@
     <ProjectReference Include="..\..\..\DMSkin\DMSkin.WPF\DMSkin.WPF.csproj">
       <Project>{168352b1-6a0c-4c9c-8a32-68b512da3cfc}</Project>
       <Name>DMSkin.WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DMSkin.Server\DMSkin.Server.csproj">
+      <Project>{682143FF-42AC-4FE6-815C-D7AD701BF4FC}</Project>
+      <Name>DMSkin.Server</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
