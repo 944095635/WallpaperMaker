@@ -7,7 +7,7 @@ Windows 桌面动态壁纸 视频壁纸
 
 #### 开源的动态桌面壁纸。
 
-<a href="http://on9mnekns.bkt.clouddn.com/desktopdemo.mp4" target="_blank">[![asciicast](http://on9mnekns.bkt.clouddn.com/VODEOdemo.jpg)]</a>
+<a href="http://on9mnekns.bkt.clouddn.com/desktopdemo.mp4" target="_blank">[![asciicast](http://on9mnekns.bkt.clouddn.com/demo.gif)]</a>
 
 
 ## 前言 
