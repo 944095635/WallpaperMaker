@@ -41,9 +41,13 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 #### 【使用&修改】
 
-#### 1. [下载使用](#)
+#### 1. [下载使用]
 
 你可以直接下载压缩包解压运行。
+
+[迷你版](https://github.com/944095635/DMSkin-LiveWallpaper/releases/download/1.0.0.0/Build-MINI.zip)
+
+[完整版](https://github.com/944095635/DMSkin-LiveWallpaper/releases/download/1.0.0.0/Build-Max.zip) & [解码库](http://aplayer.open.xunlei.com/codecs.zip)
 
 #### 2. [下载源码](#) 然后自己编译
 点击 `DMSkin.Wallpaper.sln` 打开项目。
