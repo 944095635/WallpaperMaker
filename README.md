@@ -36,6 +36,8 @@ DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
 
 - 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
+- 截图是Windows 10 秋季创作者更新 中的亚克力玻璃 效果,其他系统请自行测试,相关内容请自行搜素Fluent Design System
+
 #### 【使用&修改】
 
 #### 1. 下载使用
@@ -118,11 +120,8 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 
 ### 1.0.0.0 (2018-10-25)
 
-1. xxx。
-
-2. xxx。
-
-3. xxx。
+1. 解码器初步完成。
+2. 操作软件初步完成。
 
 ## MIT License
 Copyright © 2018 <copyright holders>
