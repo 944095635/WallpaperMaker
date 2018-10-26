@@ -1,3 +1,0 @@
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\bin\Debug\DMSkin.Player.Xunlei.exe.config
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\bin\Debug\DMSkin.Player.Xunlei.exe
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Player.Xunlei\bin\Debug\DMSkin.Player.Xunlei.pdb

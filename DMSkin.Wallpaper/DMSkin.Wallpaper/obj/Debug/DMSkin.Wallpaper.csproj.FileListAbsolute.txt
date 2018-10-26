@@ -1,5 +1,0 @@
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.Wallpaper.exe.config
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.Wallpaper.exe
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.Wallpaper.pdb
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.WPF.dll
-D:\DMWallpaper\DMSkin.Wallpaper\DMSkin.Wallpaper\bin\Debug\DMSkin.WPF.pdb
