@@ -131,11 +131,5 @@ namespace DMSkin.Wallpaper
                 this.DragMove();
             }
         }
-
-        private void SliderWindow_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            BlurOpacity = Convert.ToUInt32(SliderWindow.Value);
-            EnableBlur();
-        }
     }
 }

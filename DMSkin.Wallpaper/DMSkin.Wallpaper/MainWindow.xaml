@@ -89,16 +89,6 @@
                     Style="{StaticResource DMOpacitySlider}"
                     ValueChanged="SliderVolume_ValueChanged"
                     Value="0" />
-                <TextBlock Margin="5" Text="调试程序窗口透明度" />
-                <Slider
-                    x:Name="SliderWindow"
-                    Grid.Column="1"
-                    Margin="5"
-                    LargeChange="1"
-                    Maximum="100"
-                    Style="{StaticResource DMOpacitySlider}"
-                    ValueChanged="SliderWindow_ValueChanged"
-                    Value="0" />
                 <dmcontrols:DMButton
                     x:Name="BtnPlay"
                     Height="30"
