@@ -20,9 +20,15 @@ namespace Wallpaper.Player
         /// <summary>
         /// 解码器路径
         /// </summary>
-        public DirectoryInfo vlclib;
-        public Player()
+        DirectoryInfo vlclib;
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="directoryInfo">解码器路径</param>
+        public Player(DirectoryInfo directoryInfo)
         {
+            //设置路径必须要放在前面
+            vlclib = directoryInfo;
             InitializeComponent();
         }
 

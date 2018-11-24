@@ -43,7 +43,7 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 
 你可以直接下载压缩包解压运行。
 
-[主程序]() 暂时未发布
+[主程序](https://github.com/944095635/DMSkin-Wallpaper-Maker/releases)
 
 [解码器](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
 

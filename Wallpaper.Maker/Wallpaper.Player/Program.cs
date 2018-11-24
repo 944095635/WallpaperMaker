@@ -39,13 +39,12 @@ namespace Wallpaper.Player
             var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
             if (Directory.Exists(Path.Combine(currentDirectory, "libvlc")))
             {
-                play = new Player
+                play = new Player(new DirectoryInfo(Path.Combine(currentDirectory, "libvlc")))
                 {
                     Width = Screen.PrimaryScreen.Bounds.Width,
                     Height = Screen.PrimaryScreen.Bounds.Height,
                     Location = new Point(0, 0)
                 };
-                play.vlclib = new DirectoryInfo(Path.Combine(currentDirectory, "libvlc"));
                 Application.Run(play);
             }
             else

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Wallpaper.Player")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("造物主壁纸解码器")]
+[assembly: AssemblyDescription("造物主壁纸解码器")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Wallpaper.Player")]
+[assembly: AssemblyCompany("DMSkin")]
+[assembly: AssemblyProduct("造物主壁纸解码器")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
