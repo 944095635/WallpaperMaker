@@ -47,7 +47,7 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 
 [解码器百度网盘下载](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
 
-[解码器Vlc官网下载](http://www.videolan.org/vlc/)  下载最新的Vlc播放器压缩包解压之后,提取需要的解码器文件.
+[解码器Vlc官网下载](http://www.videolan.org/vlc/download-windows.html)  下载最新的Vlc播放器压缩包解压之后,提取需要的解码器文件.
 
 解码器文件放至主程序软件目录中的libvlc文件夹中
 
