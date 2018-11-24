@@ -1,4 +1,4 @@
-# DMSkin-LiveWallpaper
+# DMSkin-Wallpaper-Maker
 Windows 桌面动态壁纸 视频壁纸
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
@@ -8,10 +8,10 @@ Windows 桌面动态壁纸 视频壁纸
 #### 开源的动态桌面壁纸。
 
 <a href="http://on9mnekns.bkt.clouddn.com/desktopdemo.mp4" target="_blank">
-   <img src="https://raw.githubusercontent.com/944095635/DMSkin-LiveWallpaper/master/Screenshot/demo.gif">
+   <img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/demo.gif">
 </a>
 
-<img src="https://raw.githubusercontent.com/944095635/DMSkin-LiveWallpaper/master/Screenshot/Debug.png">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/Debug.png">
 
 ## 【前言】 
 Wallpaper.Maker 采用WIN32 接口实现视频嵌入桌面。
@@ -50,37 +50,35 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 
 你可以直接下载压缩包解压运行。
 
-[迷你版](https://github.com/944095635/DMSkin-LiveWallpaper/releases/download/1.0.0.0/Build-MINI.zip)
+[主程序](https://github.com/944095635/DMSkin-Wallpaper-Maker/releases/download/1.0.0.0/Build-MINI.zip)
 
-[完整版](https://github.com/944095635/DMSkin-LiveWallpaper/releases/download/1.0.0.0/Build-Max.zip) & [解码库](http://aplayer.open.xunlei.com/codecs.zip)
+[解码器](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
+
 
 #### 2. 下载源码 然后自己编译
-[下载源码](https://codeload.github.com/944095635/DMSkin-LiveWallpaper/zip/master) 点击 `DMSkin.Wallpaper.sln` 打开项目。
+[下载源码](https://codeload.github.com/944095635/DMSkin-Wallpaper-Maker/zip/master) 点击 `Wallpaper.Maker.sln` 打开项目。
 
-#### 【迅雷解码器 开发环境】 [迅雷Aplayer官网](http://aplayer.open.xunlei.com/)
-编译DMSkin.Player.Xunlei需要安装SDK
-
-###### 安装SDK用于开发 [下载开发SDK](http://aplayer.open.xunlei.com/APlayerSDK.zip)
+###### 目前解码器使用的是[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet)
 ````csharp
-将SDK下载解压到D盘根目录 D:\APlayerSDK
-以管理员启动命令提示行 CMD.EXE
-输入命令:
-    D: 执行
-    CD D:\APlayerSDK 执行
-    install.bat 执行
-结果:
-    复制了8个文件 OK
-````
+Vlc.DotNet 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)进一步封装的.NET 版本,
+它支持Winform和WPF,当前项目的解码器部分使用的是Winform版本,因为它的效率更高资源占用更低。
 
-###### 下载完整解码库用于播放 [下载解码库CodeCS](http://aplayer.open.xunlei.com/codecs.zip)
-````csharp
-将codecs下载解压到软件根目录(保留codecs文件夹)
+开发的时候需要从Nuget 安装Vlc.DotNet.Forms,(Vlc.DotNet.Core.Interops&Vlc.DotNet.Core 会自动安装)
+
+解码器下载地址:http://www.videolan.org/vlc/
+你可以从官网下载最新的Vlc播放器压缩包解压之后,提取需要的文件放至软件目录中的libvlc文件夹中.
+/libvlc
+/libvlc/plugins
+/libvlc/libvlc.dll 
+/libvlc/libvlccore.dll
+
+或者下载我打包的解码器压缩包:[解码器](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
 ````
 
 #### 【自定义解码器】
-虽然目前只内置了2种解码器(MediaElement+Aplayer)
+虽然目前只内置了1种解码器Vlc.DotNet
 
-但是你可以通过编写代码实现自己的解码器(例如用VLC解码器)
+但是你可以通过编写代码实现自己的解码器(例如用迅雷Aplayer解码器)
 ````csharp
 /// <summary>
 /// 放到解码器初始化的地方-解码器必须一直处于运行状态 Winform/WPF/Console 都支持
@@ -114,7 +112,7 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 - **DMSkin QQ交流群: 194684812**
 
 - **WPF 课程学习群 (收费): 611509631**
-- **<a href="http://dmskin.lolimay.cn" target="_blank">联系作者</a>**
+- **<a href="tencent://message/?uin=944095635" target="_blank">联系作者</a>**
 - **[DMSkin官方网站](http://www.dmskin.com)**
 
 ## 捐赠
@@ -127,7 +125,7 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 ### 1.0.0.1 (2018-11-24)
 
 1. 因迅雷Aplayer解码器性能低,系统兼容性差，故舍弃。
-2. 解码器改用[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet),CPU使用率从15-30%降低到3%-5%。
+2. 解码器改用[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet),CPU使用率从 15-30% 降低到 3%-5% 。
 
 ### 1.0.0.0 (2018-10-25)
 
