@@ -43,7 +43,7 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 
 你可以直接下载压缩包解压运行。
 
-[主程序](https://github.com/944095635/DMSkin-Wallpaper-Maker/releases/download/1.0.0.0/Build-MINI.zip)
+[主程序]() 暂时未发布
 
 [解码器](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
 
@@ -109,7 +109,7 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 - **DMSkin QQ交流群: 194684812**
 
 - **WPF 课程学习群 (收费): 611509631**
-- **<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=944095635&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2::52" alt="联系作者" title="联系作者"/></a>**
+- **<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=944095635&site=qq&menu=yes">联系作者</a>**
 - **[DMSkin官方网站](http://www.dmskin.com)**
 
 ## 捐赠
