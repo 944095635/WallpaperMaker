@@ -15,20 +15,22 @@ Windows 桌面动态壁纸 视频壁纸
 
 ## 【前言】 
 Wallpaper.Maker 采用WIN32 接口实现视频嵌入桌面。
+
 Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,现阶段改为[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet)CPU使用率降低至1%-5%(跟个人电脑配置有关)
 #### 【项目结构】
 
 
 | 项目名称                | 描述   |特性   |缺点      |
 | :----:              | :---:          | :----:     | :----:     |
-| DMSkin.Wallpaper |主程序   |  -   |  -  |
+| Wallpaper.Maker |主程序   |  -   |  -  |
 | DMSkin.WPF  |  UI库       | UI的一些封装 |  开发时需要从Github或Nuget获取       |
-| DMSkin.Player.Xunlei |迅雷解码器   |  开发时需要安装Aplayer环境,HTTP支持,更多格式(GIF,MP4.AVI.FLV.WEBM.RMVB)   |  解码库体积(+33.2MB)  |
+| Wallpaper.Player |Vlc解码器   |  HTTP支持,超多格式(GIF,MP4.AVI.FLV.WEBM.RMVB)  |  解码库体积(+~30MB)  |
+| Wallpaper.Server |通讯协议   |  负责主程序和解码器之间的通讯  |  NamedPipe命名管道通讯  |
 
 #### 【执行逻辑】
-- `主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷解码器`。
+- `服务`是作为程序之间数据交互的基础,通讯原理是NamedPipe命名管道通讯。
 
-- `主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷解码器`。
+- `主程序`程序启动的时候，会根据`服务PlayServer`检测系统进程中是否存在`VLC解码器`。
 
 - 如果存在对应`解码器`进程，程序不会执行任何操作(如果不存在，`主程序`会启动解码器)。
 
@@ -36,9 +38,9 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,现
 
 #### 【注意 源码编译&亚克力玻璃材质】
 
-- 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
+<del>- 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。
 
-- 截图是Windows 10 秋季创作者更新 中的亚克力玻璃 效果,其他系统请自行测试,相关内容请自行搜素Fluent Design System
+- 截图是Windows 10 秋季创作者更新 中的亚克力玻璃 效果,其他系统请自行测试,相关内容请自行搜素Fluent Design System</del>
 
 #### 【使用&修改】
 
