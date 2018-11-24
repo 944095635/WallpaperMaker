@@ -11,8 +11,6 @@ Windows 桌面动态壁纸 视频壁纸
    <img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/demo.gif">
 </a>
 
-<img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/Debug.png">
-
 ## 【前言】 
 Wallpaper.Maker 采用WIN32 接口实现视频嵌入桌面。
 
@@ -54,22 +52,28 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 [下载源码](https://codeload.github.com/944095635/DMSkin-Wallpaper-Maker/zip/master) 点击 `Wallpaper.Maker.sln` 打开项目。
 
 ###### 目前解码器使用的是[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet)
-Vlc.DotNet 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)进一步封装的.NET 版本,
-它支持Winform和WPF,当前项目的解码器部分使用的是Winform版本,因为它的效率更高资源占用更低。
+Vlc.DotNet 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)进一步封装的.NET 版本,它支持Winform和WPF.
+
+当前项目的解码器部分使用的是Winform版本,因为它的效率更高资源占用更低。
 
 开发的时候需要从Nuget 安装Vlc.DotNet.Forms,(Vlc.DotNet.Core.Interops&Vlc.DotNet.Core 会自动安装)
 
-解码器下载地址:http://www.videolan.org/vlc/
-你可以从官网下载最新的Vlc播放器压缩包解压之后,提取需要的文件放至软件目录中的libvlc文件夹中.
+解码器下载地址:http://www.videolan.org/vlc/ 你可以从官网下载最新的Vlc播放器压缩包解压之后,
+
+提取需要的文件放至软件目录中的libvlc文件夹中.
+
 /libvlc
+
 /libvlc/plugins
+
 /libvlc/libvlc.dll 
+
 /libvlc/libvlccore.dll
 
 或者下载我打包的解码器压缩包:[解码器](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
 
 #### 【自定义解码器】
-虽然目前只内置了1种解码器Vlc.DotNet
+虽然目前只内置解码器Vlc.DotNet
 
 但是你可以通过编写代码实现自己的解码器(例如用迅雷Aplayer解码器)
 ````csharp
