@@ -38,11 +38,6 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 
 - `主程序Maker`与`解码器Player`分离，减少内存消耗。主程序退出之后`解码器Player`依然会运行(主程序中可以`关闭解码器进程`)。
 
-<del>#### 【注意 源码编译&亚克力玻璃材质】</del>
-
-<del>- 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。</del>
-
-<del>- 截图是Windows 10 秋季创作者更新 中的亚克力玻璃 效果,其他系统请自行测试,相关内容请自行搜素Fluent Design System</del>
 
 #### 【使用&修改】
 
@@ -59,7 +54,6 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 [下载源码](https://codeload.github.com/944095635/DMSkin-Wallpaper-Maker/zip/master) 点击 `Wallpaper.Maker.sln` 打开项目。
 
 ###### 目前解码器使用的是[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet)
-````csharp
 Vlc.DotNet 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)进一步封装的.NET 版本,
 它支持Winform和WPF,当前项目的解码器部分使用的是Winform版本,因为它的效率更高资源占用更低。
 
@@ -73,7 +67,6 @@ Vlc.DotNet 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)�
 /libvlc/libvlccore.dll
 
 或者下载我打包的解码器压缩包:[解码器](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
-````
 
 #### 【自定义解码器】
 虽然目前只内置了1种解码器Vlc.DotNet
@@ -131,6 +124,12 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 
 1. 解码器初步完成。
 2. 操作软件初步完成。
+
+<del>#### 【注意 源码编译&亚克力玻璃材质】</del>
+
+<del>- 基于VS 2017 旗舰版开发，.NET 4.5.5开发环境（理论可修改至.NET 3.5），源码包括一些c# 6.0+语法，如果你在VS 2015甚至更低的VS版本上编译不通过的话，请自行修改中源码不兼容的部分。</del>
+
+<del>- 截图是Windows 10 秋季创作者更新 中的亚克力玻璃 效果,其他系统请自行测试,相关内容请自行搜素Fluent Design System</del>
 
 ## MIT License
 Copyright © 2018 <copyright holders>
