@@ -109,7 +109,7 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 - **DMSkin QQ交流群: 194684812**
 
 - **WPF 课程学习群 (收费): 611509631**
-- **<a href="tencent://message/?uin=944095635" target="_blank">联系作者</a>**
+- **<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=944095635&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2::52" alt="联系作者" title="联系作者"/></a>**
 - **[DMSkin官方网站](http://www.dmskin.com)**
 
 ## 捐赠
