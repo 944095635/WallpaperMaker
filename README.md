@@ -118,6 +118,11 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 
 ## 【更新日志】
 
+### 1.0.0.1 (2018-11-24)
+
+1. 因迅雷Aplayer解码器性能低,系统兼容性差，故舍弃。
+2. 解码器改用[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet),CPU使用率从15-30%降低到3%-5%。
+
 ### 1.0.0.0 (2018-10-25)
 
 1. 解码器初步完成。
