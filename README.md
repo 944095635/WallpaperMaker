@@ -45,9 +45,11 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 
 [主程序](https://github.com/944095635/DMSkin-Wallpaper-Maker/releases)
 
-[解码器](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
+[解码器百度网盘下载](https://pan.baidu.com/s/1nnZuaB9DyI4LDKyeH3Vn-A)
 
-[Vlc官网](http://www.videolan.org/vlc/)下载最新的Vlc播放器压缩包解压之后,提取需要的解码器文件放至软件目录中的libvlc文件夹中.
+[解码器Vlc官网下载](http://www.videolan.org/vlc/)下载最新的Vlc播放器压缩包解压之后,提取需要的解码器文件.
+
+解码器文件放至主程序软件目录中的libvlc文件夹中
 
 /libvlc
 
