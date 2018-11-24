@@ -14,18 +14,20 @@ Windows 桌面动态壁纸 视频壁纸
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-LiveWallpaper/master/Screenshot/Debug.png">
 
 ## 【前言】 
-DMSkin.Wallpaper 采用WIN32 接口实现视频嵌入桌面。
-
+Wallpaper.Maker 采用WIN32 接口实现视频嵌入桌面。
+Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,现阶段改为[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet)CPU使用率降低至1%-5%(跟个人电脑配置有关)
 #### 【项目结构】
 
 
 | 项目名称                | 描述   |特性   |缺点      |
 | :----:              | :---:          | :----:     | :----:     |
 | DMSkin.Wallpaper |主程序   |  -   |  -  |
-| DMSkin.Player  |  迷你解码器       |MediaElement,HTTP支持,支持MP4 AVI MP3等 |  解码能力稍差       |
+| DMSkin.WPF  |  UI库       | UI的一些封装 |  开发时需要从Github或Nuget获取       |
 | DMSkin.Player.Xunlei |迅雷解码器   |  开发时需要安装Aplayer环境,HTTP支持,更多格式(GIF,MP4.AVI.FLV.WEBM.RMVB)   |  解码库体积(+33.2MB)  |
 
 #### 【执行逻辑】
+- `主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷解码器`。
+
 - `主程序`程序启动的时候，会根据`PlayServer`中的`PlayerType`检测系统进程中是否存在`迷你解码器`或者`迅雷解码器`。
 
 - 如果存在对应`解码器`进程，程序不会执行任何操作(如果不存在，`主程序`会启动解码器)。
