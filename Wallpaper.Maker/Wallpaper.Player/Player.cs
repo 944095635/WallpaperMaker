@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,6 +17,10 @@ namespace Wallpaper.Player
 {
     public partial class Player : Form
     {
+        /// <summary>
+        /// 解码器路径
+        /// </summary>
+        public DirectoryInfo vlclib;
         public Player()
         {
             InitializeComponent();
@@ -66,28 +71,13 @@ namespace Wallpaper.Player
         /// </summary>
         private void media_VlcLibDirectoryNeeded(object sender, Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs e)
         {
-            var currentAssembly = Assembly.GetEntryAssembly();
-            var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
-            // Default installation path of VideoLAN.LibVLC.Windows
-            e.VlcLibDirectory = new DirectoryInfo(Path.Combine(currentDirectory, "libvlc"));
-
-            if (!e.VlcLibDirectory.Exists)
-            {
-                var folderBrowserDialog = new FolderBrowserDialog();
-                folderBrowserDialog.Description = "Select Vlc libraries folder.";
-                folderBrowserDialog.RootFolder = Environment.SpecialFolder.Desktop;
-                folderBrowserDialog.ShowNewFolderButton = true;
-                if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-                {
-                    e.VlcLibDirectory = new DirectoryInfo(folderBrowserDialog.SelectedPath);
-                }
-            }
+            e.VlcLibDirectory = vlclib;
         }
 
         private void media_Log(object sender, Vlc.DotNet.Core.VlcMediaPlayerLogEventArgs e)
         {
             string message = string.Format("libVlc : {0} {1} @ {2}", e.Level, e.Message, e.Module);
-            System.Diagnostics.Debug.WriteLine(message);
+            Debug.WriteLine(message);
         }
     }
 }

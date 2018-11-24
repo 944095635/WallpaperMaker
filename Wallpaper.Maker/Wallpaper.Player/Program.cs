@@ -1,8 +1,10 @@
 ﻿using DMSkin.WPF.API;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.IO.Pipes;
+using System.Reflection;
 using System.Windows.Forms;
 using Wallpaper.Server;
 
@@ -14,7 +16,6 @@ namespace Wallpaper.Player
         /// 播放器对象
         /// </summary>
         static Player play;
-
 
         [STAThread]
         static void Main()
@@ -32,13 +33,27 @@ namespace Wallpaper.Player
                 ProcessMessage = ProcessMessage
             };
             server.Run();
-            play = new Player
+
+            //程序路径
+            var currentAssembly = Assembly.GetEntryAssembly();
+            var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
+            if (Directory.Exists(Path.Combine(currentDirectory, "libvlc")))
             {
-                Width = Screen.PrimaryScreen.Bounds.Width,
-                Height = Screen.PrimaryScreen.Bounds.Height,
-                Location = new Point(0, 0)
-            };
-            Application.Run(play);
+                play = new Player
+                {
+                    Width = Screen.PrimaryScreen.Bounds.Width,
+                    Height = Screen.PrimaryScreen.Bounds.Height,
+                    Location = new Point(0, 0)
+                };
+                play.vlclib = new DirectoryInfo(Path.Combine(currentDirectory, "libvlc"));
+                Application.Run(play);
+            }
+            else
+            {
+                MessageBox.Show("缺少视频解码器,前往官网下载.");
+                Process.Start("http://www.dmskin.com");
+                Application.Exit();
+            }
         }
 
         /// <summary>
@@ -50,14 +65,14 @@ namespace Wallpaper.Player
             {
                 case ServerMsgType.OpenUrl:
                     Execute.OnUIThread(() => {
-                        play.Play(msg.Value);
+                        play?.Play(msg.Value);
                     });
                     break;
                 case ServerMsgType.InDeskTop:
                     break;
                 case ServerMsgType.Volume:
                     Execute.OnUIThread(() => {
-                        play.SetVolume(msg.IntValue);
+                        play?.SetVolume(msg.IntValue);
                     });
                     break;
             }
@@ -68,7 +83,7 @@ namespace Wallpaper.Player
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             //LogHelper.WriteLog(this.GetType(), e.ExceptionObject.ToString());
-            MessageBox.Show(e.ExceptionObject.ToString());
+            //MessageBox.Show(e.ExceptionObject.ToString());
         }
     }
 }
