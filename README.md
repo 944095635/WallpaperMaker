@@ -24,7 +24,7 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 | :----:              | :---:          | :----:     | :----:     |
 | Wallpaper.Maker |主程序   |  -   |  -  |
 | DMSkin.WPF  |  UI库       | UI的一些封装 |  开发时需要从Github或Nuget获取       |
-| Wallpaper.Player |Vlc解码器   |  HTTP支持,超多格式(GIF,MP4.AVI.FLV.WEBM.RMVB)  |  解码库体积(+~30MB)  |
+| Wallpaper.Player |Vlc解码器   |  HTTP支持,超多格式(GIF,MP4.AVI.FLV.WEBM.RMVB)  |  解码库体积(24MB)  |
 | Wallpaper.Server |通讯协议   |  负责主程序和解码器之间的通讯  |  NamedPipe命名管道通讯  |
 
 #### 【执行逻辑】
