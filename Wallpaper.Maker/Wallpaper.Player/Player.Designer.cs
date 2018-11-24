@@ -45,6 +45,7 @@
             this.media.VlcLibDirectory = null;
             this.media.VlcMediaplayerOptions = null;
             this.media.VlcLibDirectoryNeeded += new System.EventHandler<Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs>(this.media_VlcLibDirectoryNeeded);
+            this.media.EndReached += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs>(this.media_EndReached);
             // 
             // Player
             // 

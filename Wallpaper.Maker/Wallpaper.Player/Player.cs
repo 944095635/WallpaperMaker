@@ -1,16 +1,8 @@
 ﻿using DMSkin.WPF.API;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Wallpaper.Player
@@ -32,14 +24,14 @@ namespace Wallpaper.Player
             InitializeComponent();
         }
 
-        public string Url = string.Empty;
+        public Uri Url;
         /// <summary>
         /// 播放一个路径
         /// </summary>
         public void Play(string url)
         {
-            Url = url;
-            media.Play(new Uri(url));
+            Url = new Uri(url);
+            media.Play(Url);
             InDeskTop();
         }
 
@@ -63,12 +55,13 @@ namespace Wallpaper.Player
         /// </summary>
         internal void FullScreen()
         {
+        
             //media.SetConfig(204, Width + ";" + Height);
         }
 
         public void SetVolume(int Volume)
         {
-            //media.SetVolume(Volume);
+            media.Audio.Volume = Volume;
         }
 
         /// <summary>
@@ -84,6 +77,16 @@ namespace Wallpaper.Player
         {
             string message = string.Format("libVlc : {0} {1} @ {2}", e.Level, e.Message, e.Module);
             Debug.WriteLine(message);
+        }
+
+        /// <summary>
+        /// 视频播放完毕
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void media_EndReached(object sender, Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs e)
+        {
+            ThreadPool.QueueUserWorkItem((p) => media.Play(Url));
         }
     }
 }

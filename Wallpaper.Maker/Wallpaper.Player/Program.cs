@@ -64,14 +64,14 @@ namespace Wallpaper.Player
             {
                 case ServerMsgType.OpenUrl:
                     Execute.OnUIThread(() => {
-                        play?.Play(msg.Value);
+                        play.Play(msg.Value);
                     });
                     break;
                 case ServerMsgType.InDeskTop:
                     break;
                 case ServerMsgType.Volume:
                     Execute.OnUIThread(() => {
-                        play?.SetVolume(msg.IntValue);
+                        play.SetVolume(msg.IntValue);
                     });
                     break;
             }
@@ -82,7 +82,7 @@ namespace Wallpaper.Player
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             //LogHelper.WriteLog(this.GetType(), e.ExceptionObject.ToString());
-            //MessageBox.Show(e.ExceptionObject.ToString());
+            MessageBox.Show(e.ExceptionObject.ToString());
         }
     }
 }
