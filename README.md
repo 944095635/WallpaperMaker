@@ -16,7 +16,7 @@ Wallpaper.Maker 采用WIN32 接口实现视频嵌入桌面。
 
 Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 
-现阶段改为[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet),CPU使用率降低至1%-5%(跟个人电脑配置有关)
+现阶段改为[libvlcsharp](https://github.com/videolan/libvlcsharp),CPU使用率降低至1%-5%(跟个人电脑配置有关)
 #### 【项目结构】
 
 
@@ -63,15 +63,15 @@ Wallpaper.Maker 最开始采用的是迅雷Aplayer,CPU使用率颇高15%-30%,
 #### 2. 下载源码 然后自己编译
 [下载源码](https://codeload.github.com/944095635/DMSkin-Wallpaper-Maker/zip/master) 点击 `Wallpaper.Maker.sln` 打开项目。
 
-###### 目前解码器使用的是[Vlc.DotNet](https://github.com/ZeBobo5/Vlc.DotNet)
-Vlc.DotNet 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)进一步封装的.NET 版本,它支持Winform和WPF.
+###### 目前解码器使用的是[libvlcsharp](https://github.com/videolan/libvlcsharp)
+libvlcsharp 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)进一步封装的.NET 版本,它支持Winform和WPF.
 
 当前项目的解码器部分使用的是Winform版本,因为它的效率更高资源占用更低。
 
-开发的时候需要从Nuget 安装Vlc.DotNet.Forms,(Vlc.DotNet.Core.Interops&Vlc.DotNet.Core 会自动安装)
+开发的时候需要从Nuget 安装，Nuget版本没有修改解码器的加载路径
 
 #### 【自定义解码器】
-虽然目前只内置解码器Vlc.DotNet
+虽然目前只内置解码器libvlcsharp
 
 但是你可以通过编写代码实现自己的解码器(例如用迅雷Aplayer解码器)
 ````csharp
@@ -116,6 +116,9 @@ public void ProcessMessage(ServerMsg msg, NamedPipeServerStream pipeServer)
 <img src="http://dmskin.com/pay.jpg" width="500">
 
 ## 【更新日志】
+
+### 1.0.0.2（2018-11-29）
+1.解码器改为官网封装的libvlcsharp
 
 ### 1.0.0.1 (2018-11-24)
 
