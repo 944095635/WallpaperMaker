@@ -57,6 +57,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DMSkin.Core, Version=2.5.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DMSkin.Core.2.5.1.1\lib\net40\DMSkin.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing.Design" />
@@ -69,15 +72,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Vlc.DotNet.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vlc.DotNet.Core.2.2.1\lib\net45\Vlc.DotNet.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Vlc.DotNet.Core.Interops, Version=2.2.1.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vlc.DotNet.Core.Interops.2.2.1\lib\net45\Vlc.DotNet.Core.Interops.dll</HintPath>
-    </Reference>
-    <Reference Include="Vlc.DotNet.Forms, Version=2.2.1.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vlc.DotNet.Forms.2.2.1\lib\net45\Vlc.DotNet.Forms.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Player.cs">
@@ -116,9 +110,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\DMSkin\DMSkin.WPF\DMSkin.WPF.csproj">
-      <Project>{168352B1-6A0C-4C9C-8A32-68B512DA3CFC}</Project>
-      <Name>DMSkin.WPF</Name>
+    <ProjectReference Include="..\LibVLCSharp\LibVLCSharp.csproj">
+      <Project>{F6195983-DD06-4112-9E1B-89933E5CBD16}</Project>
+      <Name>LibVLCSharp</Name>
     </ProjectReference>
     <ProjectReference Include="..\Wallpaper.Server\Wallpaper.Server.csproj">
       <Project>{143bb45a-3cf8-419b-b1e8-214af30b68fb}</Project>

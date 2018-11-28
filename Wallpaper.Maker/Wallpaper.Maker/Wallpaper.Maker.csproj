@@ -56,6 +56,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DMSkin.Core, Version=2.5.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DMSkin.Core.2.5.1.1\lib\net40\DMSkin.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DMSkin.WPF, Version=2.5.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DMSkin.WPF.2.5.1.1\lib\net40\DMSkin.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
@@ -108,6 +114,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,10 +124,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\DMSkin\DMSkin.WPF\DMSkin.WPF.csproj">
-      <Project>{168352b1-6a0c-4c9c-8a32-68b512da3cfc}</Project>
-      <Name>DMSkin.WPF</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Wallpaper.Server\Wallpaper.Server.csproj">
       <Project>{143bb45a-3cf8-419b-b1e8-214af30b68fb}</Project>
       <Name>Wallpaper.Server</Name>

@@ -21,6 +21,7 @@ namespace Wallpaper.Server
         /// </summary>
         public static void Play(string Url)
         {
+            StartPlayer();
             if (IsRun())
             {
                 using (NamedPipeClient client = new NamedPipeClient(".", "Play.Server"))

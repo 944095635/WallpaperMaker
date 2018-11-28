@@ -28,44 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.media = new Vlc.DotNet.Forms.VlcControl();
-            ((System.ComponentModel.ISupportInitialize)(this.media)).BeginInit();
             this.SuspendLayout();
-            // 
-            // media
-            // 
-            this.media.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.media.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.media.Location = new System.Drawing.Point(0, 0);
-            this.media.Name = "media";
-            this.media.Size = new System.Drawing.Size(800, 450);
-            this.media.Spu = -1;
-            this.media.TabIndex = 0;
-            this.media.Text = "vlcControl";
-            this.media.VlcLibDirectory = null;
-            this.media.VlcMediaplayerOptions = null;
-            this.media.VlcLibDirectoryNeeded += new System.EventHandler<Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs>(this.media_VlcLibDirectoryNeeded);
-            this.media.EndReached += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs>(this.media_EndReached);
             // 
             // Player
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.media);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Player";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            ((System.ComponentModel.ISupportInitialize)(this.media)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Vlc.DotNet.Forms.VlcControl media;
     }
 }
 

@@ -1,0 +1,26 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.46">
+  <PropertyGroup>
+    <Title>LibVLCSharp</Title>
+    <Summary>.NET bindings for LibVLC</Summary>
+    <Description>.NET bindings for LibVLC</Description>
+    <PackageTags>libvlc native xamarin .net video audio media mediaplayer</PackageTags>
+    <TargetFrameworks>net40</TargetFrameworks>
+    <RootNamespace>LibVLCSharp</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NeutralLanguage>en</NeutralLanguage>
+    <LangVersion>default</LangVersion>
+    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <PackageLicenseUrl>https://github.com/mfkl/LibVLCSharp/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/mfkl/LibVLCSharp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/mfkl/LibVLCSharp</PackageProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(UNITY_ANDROID)=='true'">
+    <DefineConstants>$(DefineConstants);UNITY_ANDROID</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Platforms\**\*.cs" />
+    <None Include="Platforms\**\*.cs" />
+  </ItemGroup>
+</Project>

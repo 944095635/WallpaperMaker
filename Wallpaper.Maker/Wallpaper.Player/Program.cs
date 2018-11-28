@@ -1,4 +1,5 @@
-﻿using DMSkin.WPF.API;
+﻿using DMSkin.Core.Common;
+using LibVLCSharp.Shared;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -34,12 +35,15 @@ namespace Wallpaper.Player
             };
             server.Run();
 
+            //解码器初始化
+            Core.Initialize();
+
             //程序路径
             var currentAssembly = Assembly.GetEntryAssembly();
             var currentDirectory = new FileInfo(currentAssembly.Location).DirectoryName;
             if (Directory.Exists(Path.Combine(currentDirectory, "libvlc")))
             {
-                play = new Player(new DirectoryInfo(Path.Combine(currentDirectory, "libvlc")))
+                play = new Player()
                 {
                     Width = Screen.PrimaryScreen.Bounds.Width,
                     Height = Screen.PrimaryScreen.Bounds.Height,
