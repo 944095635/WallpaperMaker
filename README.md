@@ -68,7 +68,7 @@ libvlcsharp 是根据开源视频解码器[Vlc](https://github.com/videolan/vlc)
 
 当前项目的解码器部分使用的是Winform版本,因为它的效率更高资源占用更低。
 
-开发的时候需要从Nuget 安装Vlc.DotNet.Forms,(Vlc.DotNet.Core.Interops&Vlc.DotNet.Core 会自动安装)
+开发的时候需要从Nuget 安装，Nuget版本没有修改解码器的加载路径
 
 #### 【自定义解码器】
 虽然目前只内置解码器libvlcsharp
