@@ -19,31 +19,31 @@ namespace Wallpaper.Player
             InitializeComponent();
 
             _libVLC = new LibVLC();
-            media = new MediaPlayer(_libVLC)
+            player = new MediaPlayer(_libVLC)
             {
                 Hwnd = this.Handle
             };
-            media.EndReached += media_EndReached;
+            player.EndReached += EndReached;
         }
 
         /// <summary>
         /// 视频播放完毕
         /// </summary>
-        private void media_EndReached(object sender, EventArgs e)
+        private void EndReached(object sender, EventArgs e)
         {
-            //ThreadPool.QueueUserWorkItem((p) => media.Play(Url));
+            ThreadPool.QueueUserWorkItem((p) => player.Play(media));
         }
 
-        MediaPlayer media;
+        MediaPlayer player;
         LibVLC _libVLC;
-        public Uri Url;
+        public Media media;
         /// <summary>
         /// 播放一个路径
         /// </summary>
         public void Play(string url)
         {
-            Url = new Uri(url);
-            media.Play(new Media(_libVLC,url, Media.FromType.FromPath));
+            media = new Media(_libVLC, url, Media.FromType.FromPath);
+            player.Play(media);
             InDeskTop();
         }
 
@@ -57,7 +57,7 @@ namespace Wallpaper.Player
             {
                 //放入桌面
                 DesktopAPI.Initialization(Handle);
-                media.AspectRatio = $"{Width}:{Height}";
+                player.AspectRatio = $"{Width}:{Height}";
                 iSDeskTop = true;
             }
         }
@@ -73,7 +73,7 @@ namespace Wallpaper.Player
 
         public void SetVolume(int Volume)
         {
-            media.Volume = Volume;
+            player.Volume = Volume;
         }
 
     }
