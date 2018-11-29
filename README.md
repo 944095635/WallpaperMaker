@@ -5,7 +5,7 @@ Windows 桌面动态壁纸 视频壁纸
 ## 本项目开源最核心的内容
 ## 在线壁纸功能请前往官网下载
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/demo.png">
-
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/demo2.png">
 
 
 ![](https://img.shields.io/badge/.NET-%3E%3D3.5-brightgreen.svg)
