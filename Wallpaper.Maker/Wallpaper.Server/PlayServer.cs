@@ -1,4 +1,7 @@
 ﻿using System.Diagnostics;
+using System.IO;
+using System.Web;
+using Wallpaper.Maker.Commom;
 
 namespace Wallpaper.Server
 {
@@ -98,5 +101,14 @@ namespace Wallpaper.Server
             }
         }
         #endregion
+
+        /// <summary>
+        /// 获取文件的截图路径
+        /// </summary>
+        /// <param name="path"></param>
+        public static string SnapPath(string path)
+        {
+            return Path.Combine("Thumbnails", $"{HttpUtility.UrlEncode(Base64.EncodeBase64(path), System.Text.Encoding.UTF8)}.png");
+        }
     }
 }
