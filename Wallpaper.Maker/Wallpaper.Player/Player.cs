@@ -1,10 +1,14 @@
-﻿using DMSkin.Core.WIN32;
+﻿using DMSkin.Core.Common;
+using DMSkin.Core.WIN32;
 using LibVLCSharp.Shared;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
+using Wallpaper.Server;
 
 namespace Wallpaper.Player
 {
@@ -31,7 +35,10 @@ namespace Wallpaper.Player
         /// </summary>
         private void EndReached(object sender, EventArgs e)
         {
-            ThreadPool.QueueUserWorkItem((p) => player.Play(media));
+            if (media != null)
+            {
+                ThreadPool.QueueUserWorkItem((p) => player.Play(media));
+            }
         }
 
         MediaPlayer player;
@@ -57,6 +64,7 @@ namespace Wallpaper.Player
             {
                 //放入桌面
                 DesktopAPI.Initialization(Handle);
+                //player.Fullscreen = true;
                 player.AspectRatio = $"{Width}:{Height}";
                 iSDeskTop = true;
             }
