@@ -5,6 +5,9 @@ Windows 桌面动态壁纸 视频壁纸
 ## 本项目只开源最核心的内容
 ## 所以你下载的源码只能将本地视频设为动态壁纸
 ## 你从发布里面下载的程序是编译好的,在核心功能上增加了新功能
+
+## [下载地址](https://github.com/944095635/DMSkin-Wallpaper-Maker/releases)
+
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/DX1.png">
 <img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/DX2.png">
 
