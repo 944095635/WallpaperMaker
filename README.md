@@ -1,7 +1,10 @@
-# DMSkin-Wallpaper-Maker
+# WallpaperMaker
 Windows 桌面动态壁纸 视频壁纸
 
-# ！！！！此项目目前运营中，招募开发者，测试，推广，有兴趣请联系我（PS:没有工资的哟，目前软件也是免费软件）。QQ944095635！！！！！
+STEAM 版本:
+[STEAM下载地址](https://store.steampowered.com/app/1010800/Wallpaper_Maker/)
+
+
 
 
 ## 本项目只开源最核心的内容
