@@ -1,12 +1,40 @@
 # WallpaperMaker
 Windows 桌面动态壁纸 视频壁纸
 
-STEAM 版本:
-[STEAM下载地址](https://store.steampowered.com/app/1010800/Wallpaper_Maker/)
+# STEAM 版本:
+# [STEAM下载地址](https://store.steampowered.com/app/1010800/Wallpaper_Maker/)
+
+# [最新编译绿色版 4.0.1](https://store.steampowered.com/app/1010800/Wallpaper_Maker/)
+
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/image1.png">
+<img src="https://raw.githubusercontent.com/944095635/DMSkin-Wallpaper-Maker/master/Screenshot/image2.png">
+
+# 软件目前是一个离线软件的状态，可以使用，资源也放在百度网盘的，其他资源请自行查找
+# 官方QQ 1群 688016282
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------
+# -
+# -
+# -
+# -
+# -
+# -
+# -
+# -
+# -
 ## 本项目只开源最核心的内容
 ## 所以你下载的源码只能将本地视频设为动态壁纸
 ## 你从发布里面下载的程序是编译好的,在核心功能上增加了新功能
